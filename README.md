@@ -10,7 +10,7 @@ Static site: home page plus Terms of Service, Privacy Policy, Refund & Cancellat
 
 ## Deploying from GitHub (cPanel)
 
-One-time, in the corpcio.com cPanel → **Git Version Control** → Create: clone this repo into e.g. `/home/<user>/repositories/corpcio-site` (not into `public_html`). A private repo needs an SSH deploy key: cPanel → SSH Access → generate a key, then add the public key on GitHub → repo Settings → Deploy keys (read-only).
+One-time, in the corpcio.com cPanel → **Git Version Control** → Create: clone this repo into e.g. `/home/<user>/repositories/corpcio-frontend` (not into `public_html`). A private repo needs an SSH deploy key: cPanel → SSH Access → generate a key, then add the public key on GitHub → repo Settings → Deploy keys (read-only).
 
 Every deploy after that: push to `main`, then in Git Version Control → Manage → **Pull or Deploy** → *Update from Remote*, then *Deploy HEAD Commit*. `.cpanel.yml` copies `dist/` into `public_html`.
 
