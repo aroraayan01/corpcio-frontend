@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+{{> head}}
+<title>Your Privacy Choices &amp; Opt-Out — {{brandName}}</title>
+<meta name="description" content="Opt out of the sale or sharing of personal information or of marketing, and request access, correction or deletion of your data held by {{brandName}}.">
+</head>
+<body>
+{{> header}}
+
+<main id="main">
+  <div class="doc-head">
+    <div class="wrap">
+      <span class="label">Privacy</span>
+      <h1>Your Privacy Choices &amp; Opt-Out</h1>
+      <div class="meta">Effective {{effectiveDate}}</div>
+    </div>
+  </div>
+
+  <div class="doc">
+    <div class="wrap">
+      <nav class="toc" aria-label="Contents">
+        <span class="label">Contents</span>
+        <ol>
+          <li><a href="#sale">Do not sell or share</a></li>
+          <li><a href="#marketing">Marketing emails</a></li>
+          <li><a href="#cookies">Cookies</a></li>
+          <li><a href="#request">Make a privacy request</a></li>
+          <li><a href="#next">What happens next</a></li>
+        </ol>
+      </nav>
+
+      <article class="prose">
+        <p>This page lets you exercise your privacy choices with {{brandName}}. Full details are in our <a href="privacy.html">Privacy Policy</a>.</p>
+
+        <h2 id="sale">Do not sell or share my personal information</h2>
+        <div class="choice">
+          <div class="status" id="gpc-status">Checking your browser for Global Privacy Control…</div>
+          <p>We do not sell personal information, and we do not share it for cross-context behavioural advertising or use it for targeted advertising. That applies to everyone automatically, so you don't need to do anything.</p>
+          <p>We treat a <a href="https://globalprivacycontrol.org/" rel="noopener">Global Privacy Control</a> signal from your browser as a valid opt-out request. If you would also like a written record of your opt-out, use the form below and choose “Opt out of sale or sharing”.</p>
+        </div>
+
+        <h2 id="marketing">Marketing emails</h2>
+        <div class="choice">
+          <p>You can stop marketing emails at any time by using the unsubscribe link in any marketing email, or by choosing “Stop marketing emails” in the form below. We will act on it within 10 business days or sooner where the law requires. We will still send you messages you need about an engagement or a payment.</p>
+        </div>
+
+        <h2 id="cookies">Cookies</h2>
+        <div class="choice">
+          <p>This website sets no advertising, analytics or other non-essential cookies, so there are no cookie settings to change. Stripe's secure payment pages use cookies needed for payment and fraud prevention, as described in <a href="https://stripe.com/legal/cookies-policy" rel="noopener">Stripe's cookie policy</a>.</p>
+        </div>
+
+        <h2 id="request">Make a privacy request</h2>
+        <p>Use this form to opt out, or to access, correct, delete or get a copy of your personal information. It opens a pre-filled email in your email app, addressed to <a href="mailto:{{email}}">{{email}}</a>. Nothing is sent until you press send. If you prefer, you can simply email us directly.</p>
+
+        <form class="form" id="privacy-request" data-to="{{email}}" novalidate>
+          <label>What would you like to do?
+            <select name="type">
+              <option value="optout">Opt out of sale or sharing</option>
+              <option value="marketing">Stop marketing emails</option>
+              <option value="access">Access my personal information / get a copy</option>
+              <option value="correct">Correct my personal information</option>
+              <option value="delete">Delete my personal information</option>
+              <option value="withdraw">Withdraw my consent</option>
+              <option value="other">Something else / make a complaint</option>
+            </select>
+          </label>
+          <div class="row">
+            <label>Full name
+              <input name="name" autocomplete="name" required>
+            </label>
+            <label>Email address <small>The one you used with us</small>
+              <input name="email" type="email" autocomplete="email" required>
+            </label>
+          </div>
+          <label>Country, and state if in the US <small>Optional. Helps us apply the right law.</small>
+            <input name="region" autocomplete="country-name">
+          </label>
+          <label>Details <small>Optional. For example, what should be corrected.</small>
+            <textarea name="details"></textarea>
+          </label>
+          <label class="check"><input type="checkbox" name="agent"> I am an authorised agent making this request for someone else.</label>
+          <label class="check"><input type="checkbox" name="confirm" required> I confirm this information is accurate and that I am the person it concerns, or their authorised agent.</label>
+          <p class="err" hidden>Please enter your name and a valid email address, and tick the confirmation box.</p>
+          <div><button class="btn btn-dark" type="submit">Prepare my request email</button></div>
+          <p class="hint">Please don't include card numbers or other sensitive information in your request.</p>
+        </form>
+
+        <h2 id="next">What happens next</h2>
+        <ul>
+          <li>We will acknowledge your request within 10 days.</li>
+          <li>We may ask you to confirm your identity, usually by replying from the email address we have on file. An authorised agent will need to show written permission from you.</li>
+          <li>We will respond in full within one month (45 days under US state laws). Where the law allows, we may extend this once if a request is complex, and we will tell you why.</li>
+          <li>There is no charge, and we will never treat you differently for exercising your rights.</li>
+          <li>Opt-out requests take effect as soon as possible and in any case within 15 business days.</li>
+        </ul>
+        <p>If you're unhappy with our response, you can appeal by replying to it, or complain to your data protection authority as described in our <a href="privacy.html#contact">Privacy Policy</a>.</p>
+      </article>
+    </div>
+  </div>
+</main>
+
+{{> footer}}
+</body>
+</html>

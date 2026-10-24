@@ -1,0 +1,7 @@
+# cPanel → Git Version Control → "Deploy HEAD Commit" runs these tasks as the account user.
+# dist/ is committed, so the server needs no Node: it only copies the built site into place.
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH="$HOME/public_html/"
+    - /bin/cp -R dist/. "$DEPLOYPATH"

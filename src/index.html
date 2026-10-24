@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+{{> head}}
+<title>{{brandName}} — Export Consultancy</title>
+<meta name="description" content="{{brandName}} is an export consultancy helping businesses grow internationally with clear advice and support.">
+</head>
+<body>
+{{> header}}
+
+<main id="main">
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="label">Export consultancy</span>
+        <h1>Taking your business <em>beyond borders.</em></h1>
+        <p class="lede">{{brandName}} is an export consultancy. We help businesses grow internationally, with clear advice and steady support along the way.</p>
+        <div class="hero-actions">
+          <a class="btn btn-dark" href="#contact">Get in touch</a>
+          <a class="btn btn-line" href="#about">About us</a>
+        </div>
+      </div>
+      <div class="hero-photo" role="img" aria-label="Close-up of a globe"></div>
+    </div>
+  </section>
+
+  <section class="services" id="about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="label">About {{brandName}}</span>
+        <h2>An export consultancy that works alongside you.</h2>
+      </div>
+      <div class="svc-list">
+        <div class="svc reveal">
+          <span class="n">01</span>
+          <h3>Advice</h3>
+          <p>Practical guidance shaped around your business.</p>
+        </div>
+        <div class="svc reveal">
+          <span class="n">02</span>
+          <h3>Planning</h3>
+          <p>A clear way forward that fits your goals.</p>
+        </div>
+        <div class="svc reveal">
+          <span class="n">03</span>
+          <h3>Support</h3>
+          <p>Someone in your corner at every step.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="route" id="approach">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="label">Our approach</span>
+        <h2>Simple from the first conversation.</h2>
+      </div>
+      <div class="route-track">
+        <div class="stop reveal">
+          <span class="label">Step 01</span>
+          <h3>Talk</h3>
+          <p>Tell us about your business and where you want to go.</p>
+        </div>
+        <div class="stop reveal">
+          <span class="label">Step 02</span>
+          <h3>Plan</h3>
+          <p>We send a written quote. Nothing is charged until you accept it.</p>
+        </div>
+        <div class="stop reveal">
+          <span class="label">Step 03</span>
+          <h3>Grow</h3>
+          <p>We stay with you as you take it forward.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="fees">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="label">Fees &amp; payment</span>
+        <h2>Clear fees, agreed up front.</h2>
+        <p>Every engagement starts with a written quote that sets out the scope, the fee and the currency. You only pay what you have agreed to. Card payments are handled by Stripe — we never see or store your full card details.</p>
+        <a class="btn btn-gold" href="refunds.html">
+          Refund &amp; cancellation policy
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+      <ul class="reveal">
+        <li><span>01</span>Written quote before any work or payment</li>
+        <li><span>02</span>Secure card payments processed by Stripe</li>
+        <li><span>03</span>Charges appear on your statement as “{{statementDescriptor}}”</li>
+        <li><span>04</span>Full refund if you cancel before work starts</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="label">Get in touch</span>
+        <h2>Let's talk.</h2>
+      </div>
+      <div class="contact-box reveal">
+        <p>Send us a short message about your business and we'll get back to you. Questions about a payment or a refund go to the same address.</p>
+        <a class="contact-mail" href="mailto:{{email}}">{{email}}</a>
+        <dl class="contact-facts">
+          <dt>Head office</dt><dd>{{registeredAddress}}</dd>
+        </dl>
+        <a class="btn btn-dark" href="mailto:{{email}}?subject=Enquiry">Email us</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{> footer}}
+</body>
+</html>
